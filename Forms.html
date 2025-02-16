@@ -9,31 +9,37 @@
 
 <body>
     <h1>Forms Demo</h1>
-    <button>OUTSIDE FORM!</button>
 
     <form action="/tacos">
-        <button type="submit">PLEASE DO NOT SUBMIT THE FORM</button>
         <p>
             <label for="username">Enter a Username:</label>
-            <input id="username" type="text" placeholder="username">
+            <input id="username" type="text" placeholder="username" name="username">
         </p>
         <p>
             <label for="password">Enter a Password:</label>
-            <input type="password" placeholder="password" id="password">
+            <input type="password" placeholder="password" id="password" name="password">
         </p>
-        <button>IN THE MIDDLE!</button>
         <p>
             <label for="color">Enter a Color:</label>
-            <input type="color" id="color">
+            <input type="color" id="color" name="color">
         </p>
         <p>
-            <label for="number">Enter a Number:</label>
-            <input type="number" placeholder="enter a number" id="number">
+            <!-- Alternative way to lable an input (less common) -->
+            <label for="number">
+                Enter a Number:
+                <input type="number" placeholder="enter a number" name="num">
+            </label>
         </p>
-        <button>Submit</button>
-        <!-- <button type="button">PLEASE DO NOT SUBMIT THE FORM</button> -->
+        <!-- this button doesn't submit the form b/c of the "type" attribute -->
+        <button type="button">Regular button (won't submit)</button>
+        <!-- This button submits the form! -->
+        <button>Submit!!</button>
+        <!-- So does this one: -->
         <input type="submit" value="Click Me!">
     </form>
+    <hr>
+    <!-- Outside of a form, no default behavior -->
+    <button>Not Inside Form</button>
 
 
 </body>
